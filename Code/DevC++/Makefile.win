@@ -1,0 +1,64 @@
+# Project: CG
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o screen.o point2D.o primitive.o line.o picture.o circle.o edgeInfo.o polygon.o edgeTable.o activeEdgeTable.o picture5.o combinedTransformation.o
+LINKOBJ  = main.o screen.o point2D.o primitive.o line.o picture.o circle.o edgeInfo.o polygon.o edgeTable.o activeEdgeTable.o picture5.o combinedTransformation.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -L"D:/porjeto2/DevC++/src/lib" -static-libgcc -L"D:/OneDrive/UNESP/2023/CG/DevC++/src/lib" -lmingw32 -lSDL2main -lSDL2 -g3
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++" -I"D:/porjeto2/DevC++/src/include"
+BIN      = CG.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+screen.o: screen.cpp
+	$(CPP) -c screen.cpp -o screen.o $(CXXFLAGS)
+
+point2D.o: point2D.cpp
+	$(CPP) -c point2D.cpp -o point2D.o $(CXXFLAGS)
+
+primitive.o: primitive.cpp
+	$(CPP) -c primitive.cpp -o primitive.o $(CXXFLAGS)
+
+line.o: line.cpp
+	$(CPP) -c line.cpp -o line.o $(CXXFLAGS)
+
+picture.o: picture.cpp
+	$(CPP) -c picture.cpp -o picture.o $(CXXFLAGS)
+
+circle.o: circle.cpp
+	$(CPP) -c circle.cpp -o circle.o $(CXXFLAGS)
+
+edgeInfo.o: edgeInfo.cpp
+	$(CPP) -c edgeInfo.cpp -o edgeInfo.o $(CXXFLAGS)
+
+polygon.o: polygon.cpp
+	$(CPP) -c polygon.cpp -o polygon.o $(CXXFLAGS)
+
+edgeTable.o: edgeTable.cpp
+	$(CPP) -c edgeTable.cpp -o edgeTable.o $(CXXFLAGS)
+
+activeEdgeTable.o: activeEdgeTable.cpp
+	$(CPP) -c activeEdgeTable.cpp -o activeEdgeTable.o $(CXXFLAGS)
+
+picture5.o: picture5.cpp
+	$(CPP) -c picture5.cpp -o picture5.o $(CXXFLAGS)
+
+combinedTransformation.o: combinedTransformation.cpp
+	$(CPP) -c combinedTransformation.cpp -o combinedTransformation.o $(CXXFLAGS)
