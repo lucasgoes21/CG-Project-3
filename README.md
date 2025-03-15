@@ -1,4 +1,4 @@
-# CG-Project-3
+# Projeto 3 Computaçao Grafica
 
 Realizar uma simulação simples 2-D de uma perna mecânica. Para isso, use primitivas para cada parte do membro inferior (coxa, perna e pé). Considere as articulações do quadril, do joelho e do tornozelo como pontos pivô ou de referência para as transformações. Realize uma animação simples para a tarefa de chutar uma bola (outra primitiva). A ilustração abaixo ajuda a entender o processo.
 
